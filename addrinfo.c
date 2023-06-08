@@ -17,9 +17,9 @@ struct args {
 	char *opt1;
 	char *opt2;
 	char *errstr;
-	int	  hasHost;
-	int	  hasPort;
-	int	  numOpts;
+	int   hasHost;
+	int   hasPort;
+	int   numOpts;
 };
 
 int   validateAndParseUserInput(int, char **, struct args *, struct addrinfo *);
@@ -35,17 +35,17 @@ int   findOpt(char *, struct args *, struct addrinfo *);
 int main(int argc, char **argv)
 {
 	int    gaires;
-	struct addrinfo *hostinfo	= NULL;
-	struct addrinfo *hinfo		= NULL;
-	struct addrinfo hints;
-	struct args 	args;
+	struct addrinfo *hostinfo = NULL;
+	struct addrinfo *hinfo	  = NULL;
+	struct addrinfo  hints;
+	struct args 	 args;
 
 	/* Initialize args struct */
-	args.host		= NULL;
-	args.port		= NULL;
-	args.opt1		= NULL;
-	args.opt2		= NULL;
-	args.errstr		= NULL;
+	args.host	= NULL;
+	args.port	= NULL;
+	args.opt1	= NULL;
+	args.opt2	= NULL;
+	args.errstr	= NULL;
 	args.hasHost	= 0;
 	args.hasPort	= 0;
 	args.numOpts	= 0;
@@ -76,14 +76,14 @@ int main(int argc, char **argv)
 		printf("++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---++\n");
 
 		/* struct addrinfo {
-		 *		int              ai_flags;
-		 *		int              ai_family;
-		 *		int              ai_socktype;
-		 *		int              ai_protocol;
-		 *		socklen_t        ai_addrlen;
-		 *		struct sockaddr *ai_addr;
-		 *		char            *ai_canonname;
-		 *		struct addrinfo *ai_next;
+		 * 	int              ai_flags;
+		 *	int              ai_family;
+		 *	int              ai_socktype;
+		 *	int              ai_protocol;
+		 *	socklen_t        ai_addrlen;
+		 *	struct sockaddr *ai_addr;
+		 *	char            *ai_canonname;
+		 *	struct addrinfo *ai_next;
 		 * };
 		 */
 
